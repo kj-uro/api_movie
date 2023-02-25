@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { apiConfig } from "./component/config";
+import { apiConfig } from "../config";
 import ms from "@/styles/Movie.module.css";
 import Layout from "./component/layout";
 import Image from "next/image";

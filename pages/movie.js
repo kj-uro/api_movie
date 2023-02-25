@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ms from "@/styles/Movie.module.css";
 import Link from "next/link";
-import { apiConfig, axiosRequest } from "./component/config";
 import Image from "next/image";
+import { apiConfig, axiosRequest } from "../config";
 
 const Movie = () => {
   const [data, setData] = useState();
