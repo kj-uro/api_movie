@@ -24,7 +24,7 @@ const Detail = () => {
             <li>{router.query.overview}</li>
             <li>RottenTomato : {router.query.vote_average}</li>
             <li>
-              <Image src={apiConfig.smallImg(router.query.poster_path)} alt={router.query.title}/>
+              <img src={apiConfig.smallImg(router.query.poster_path)} alt={router.query.title}/>
             </li>
           </ul>
         </article>

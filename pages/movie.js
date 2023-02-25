@@ -40,7 +40,7 @@ const Movie = () => {
           return (
             <figure key={key}>
               <Link href={{ pathname: "/detail", query: obj }}>
-                <Image src={apiConfig.originImg(obj.poster_path)} alt={obj.title} />
+                <img src={apiConfig.originImg(obj.poster_path)} alt={obj.title} />
                 <figcaption>{obj.title}</figcaption>
               </Link>
             </figure>
