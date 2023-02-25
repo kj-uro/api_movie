@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ms from "@/styles/Movie.module.css";
 import Link from "next/link";
 import { apiConfig, axiosRequest } from "./component/config";
+import Image from "next/image";
 
 const Movie = () => {
   const [data, setData] = useState();
@@ -35,11 +36,11 @@ const Movie = () => {
         </form>
       </p>
       <div>
-        {data.map((obj) => {
+        {data.map((obj,key) => {
           return (
-            <figure>
+            <figure key={key}>
               <Link href={{ pathname: "/detail", query: obj }}>
-                <img src={apiConfig.originImg(obj.poster_path)} />
+                <Image src={apiConfig.originImg(obj.poster_path)} alt={obj.title} />
                 <figcaption>{obj.title}</figcaption>
               </Link>
             </figure>

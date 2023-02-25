@@ -3,6 +3,7 @@ import React from "react";
 import { apiConfig } from "./component/config";
 import ms from "@/styles/Movie.module.css";
 import Layout from "./component/layout";
+import Image from "next/image";
 
 const Detail = () => {
   const router = useRouter();
@@ -23,7 +24,7 @@ const Detail = () => {
             <li>{router.query.overview}</li>
             <li>RottenTomato : {router.query.vote_average}</li>
             <li>
-              <img src={apiConfig.smallImg(router.query.poster_path)} />
+              <Image src={apiConfig.smallImg(router.query.poster_path)} alt={router.query.title}/>
             </li>
           </ul>
         </article>
